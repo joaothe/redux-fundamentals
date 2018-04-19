@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class PostForm extends Component {
 
@@ -34,7 +34,7 @@ class PostForm extends Component {
     })
     .then(res => res.json())
     .then(data => console.log(data));
-    
+
   }
 
   render() {
