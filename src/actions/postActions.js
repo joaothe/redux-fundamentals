@@ -8,3 +8,15 @@ export const fetchPosts = () => dispatch => {
       payload: posts_data
     }));
 };
+
+export const createPost = (postData) => dispatch => {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    
+  })
+    .then(res => res.json())
+    .then(data => console.log(data));
+};
