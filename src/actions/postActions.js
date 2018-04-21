@@ -15,8 +15,11 @@ export const createPost = (postData) => dispatch => {
     headers: {
       'content-type': 'application/json'
     },
-    
+    body: JSON.stringify(postData)
   })
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(post_data => dispatch({
+      type: NEW_POST,
+      payload: post_data
+    }));
 };

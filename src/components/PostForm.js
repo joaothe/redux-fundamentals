@@ -1,4 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {createPost} from '../actions/postActions';
 
 class PostForm extends Component {
 
@@ -24,6 +27,8 @@ class PostForm extends Component {
       title: this.state.title,
       description: this.state.description
     };
+
+    this.props.createPost(post);
 
   }
 
