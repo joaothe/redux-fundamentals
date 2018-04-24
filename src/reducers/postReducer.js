@@ -12,9 +12,10 @@ export default function(state = initialState, action) {
         items: action.payload,
         item: state.item
       }*/
+      console.log(action.payload);
       return {
         ...state,
-        items: action.payload
+        items: action.payload,
       };
     case NEW_POST:
       return {
